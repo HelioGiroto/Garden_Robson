@@ -1,0 +1,439 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Green - Gardening and Landscaping Services</title>
+<!-- Tailwind CSS v3 CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Montserrat for all text -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              light: '#84cc16', // Lime-600 equivalent
+              DEFAULT: '#4d7c0f', // Lime-800 equivalent for "Green" tone
+              dark: '#365314', // Lime-900 equivalent
+              accent: '#f97316' // Orange for CTA
+            }
+          },
+          fontFamily: {
+            sans: ['Montserrat', 'sans-serif'],
+            serif: ['Montserrat', 'sans-serif'], // Replaced Playfair with Montserrat as per request
+          }
+        }
+      }
+    }
+  </script>
+<style data-purpose="custom-styles">
+/* Custom overlay for hero visibility */
+.hero-overlay {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
+    }
+.text-shadow {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3)
+    }
+/* Smooth transition for hover effects */
+.transition-all {
+    transition: all 0.3s ease-in-out
+    }
+/* Background textures */
+.bg-pattern {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuD1KyRQT1SSTWk93FSDPPgTi494PkBJNhEO1GWJdahv-DjRHZXUbCPlSgaIDznmMMeca3PtzYTtsEF0PXRMvQNDUQIUgu85LDEjEdSFAJ95a5LBKOUD_XIzwTYY3gEs_u5Y61Emu8971zMcM2cbB1uiOgh9y-3EXSpjOIPbz3-7CEe2TiGYzlW3sJ3yn1V5S1fCMGeXReUIhpTXMop4Tvbh2owQSnvGKo-QHH249Ij2HTbRvSvvg-6WlPH1DLAqfdHPQLyGviKqLZM)
+    }
+</style>
+</head>
+<body class="font-sans text-gray-800 bg-white m-0 p-0">
+<!-- BEGIN: MainHeader -->
+<header class="absolute top-0 left-0 w-full z-50 bg-transparent border-b border-white/10" data-purpose="main-navigation">
+<nav class="container mx-auto flex items-center justify-between px-6 py-4">
+<!-- Logo -->
+<div class="flex items-center gap-2">
+<div class="w-10 h-10 bg-brand rounded-full flex items-center justify-center">
+<svg class="w-6 h-6 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path></svg>
+</div>
+<span class="text-3xl font-bold text-white">Green</span>
+</div>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex gap-8 text-white font-medium">
+<li><a class="hover:text-brand-light transition-all" href="#">Home</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">About Us</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">Services</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">Portfolio</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">Pages</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">Blog</a></li>
+<li><a class="hover:text-brand-light transition-all" href="#">Contact</a></li>
+</ul>
+<!-- CTA Button -->
+<div class="hidden lg:block">
+<a class="bg-brand-light hover:bg-brand text-white px-6 py-3 rounded-md font-semibold transition-all" href="#">Request A Quote</a>
+</div>
+<!-- Mobile Menu Icon (Placeholder) -->
+<div class="md:hidden text-white">
+<svg class="w-8 h-8" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</div>
+</nav>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: HeroSection - Height reduced by 25% (h-[75vh]) -->
+<section class="relative h-[75vh] min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden" data-purpose="hero">
+<!-- Background Image -->
+<img alt="Gardening Hero" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDyC3WJ7hZ_Y_A3JBHxBCmp-H1Np9RjU8uPBLpPLgC0hQ61gmJZQTCQaUXaVSp7BOEqyd6G78I_aGNxrbH5__6ADBDGvM6ha_ERB292uwQt7i8Z6NR0ZOeXQ4koApZz5PSZH3foDCWBObx_yYlf2k4MYmiM2p63Mgf_0RHf9k62p6mawec1rQuIYg8l1qfVkaUUDPiKCyxeVhv4eKMK59u7BaZDacq-kZj5x5jJZi8c_qP5m8HHYdjTvjfvLQ9vR0X0-NX5YnjwC0"/>
+<div class="absolute inset-0 hero-overlay"></div>
+<div class="relative z-10 max-w-4xl px-6">
+<h4 class="uppercase tracking-widest text-brand-light font-bold mb-4">Green Forest</h4>
+<h1 class="text-5xl md:text-7xl font-bold mb-6 text-shadow">Gardening and Landscaping Services</h1>
+<p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
+      </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-white text-brand font-bold px-8 py-4 rounded-full hover:bg-brand-light hover:text-white transition-all">Discover More</button>
+<button class="border-2 border-brand-light bg-brand-light/20 text-white font-bold px-8 py-4 rounded-full hover:bg-brand-light transition-all">Our Service</button>
+</div>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: HighlightFeatures - Increased horizontal padding (px-12) -->
+<section class="bg-brand py-12 px-12" data-purpose="features">
+<div class="container mx-auto px-6">
+<div class="grid md:grid-cols-3 gap-8 text-white">
+<!-- Feature 1 -->
+<div class="flex items-start gap-4">
+<div class="bg-white/20 p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"></path></svg>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Design &amp; Planting</h3>
+<p class="text-sm opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeat, excepturi.</p>
+</div>
+</div>
+<!-- Feature 2 -->
+<div class="flex items-start gap-4">
+<div class="bg-white/20 p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M15,12L12,15L9,12L12,9L15,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12Z"></path></svg>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Cutting Tree</h3>
+<p class="text-sm opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeat, excepturi.</p>
+</div>
+</div>
+<!-- Feature 3 -->
+<div class="flex items-start gap-4">
+<div class="bg-white/20 p-4 rounded-full shrink-0">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path></svg>
+</div>
+<div>
+<h3 class="text-xl font-bold mb-2">Watering Garden</h3>
+<p class="text-sm opacity-80">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Placeat, excepturi.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: HighlightFeatures -->
+<!-- BEGIN: AboutSection - Increased horizontal padding (px-12) -->
+<section class="py-20 bg-white px-12" data-purpose="about">
+<div class="container mx-auto px-6">
+<div class="flex flex-col lg:flex-row items-center gap-16">
+<div class="lg:w-1/2">
+<span class="text-brand font-bold uppercase tracking-widest text-sm flex items-center gap-2 mb-4">
+<span class="w-2 h-2 bg-brand rounded-full"></span> About Us
+          </span>
+<h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+            Gardening, Tree and landscaping family run business since 1975
+          </h2>
+<p class="text-gray-600 mb-6 leading-relaxed">
+            There are many variations of passages available, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua enim.
+          </p>
+<p class="text-gray-600 mb-8 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat.
+          </p>
+<button class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all">Learn More</button>
+</div>
+<div class="lg:w-1/2 relative">
+<!-- Main Image -->
+<img alt="Gardener" class="rounded-lg shadow-2xl" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRCGOG5ItZlZEMB98V-nOvWCEjLwVcOHset7xZif73EHmO4CDMNb-htkAKFIEVY17--3RVuf8SgTx5AhT0GoFdfbPzEUsCmY_g4CoXMS2kD9-H4OtAUiBoTG5RoZ-ePWuwV7SoNFKj83w1uTIBlNYEGtpDEowzz23kQYf4CF5BWgoBuoRs1QwrYzFfsZ3TbTAKEnSbuM-1kytbUnDVWKdUaRHcDEI6xqBx8z6VhVC35_y4tGQ7L2EMf2pdtTioPiLGztOSYzbpE-U"/>
+<!-- Decorative Shape -->
+<div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand/10 -z-10 rounded-full"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: AboutSection -->
+<!-- BEGIN: ServicesGrid - BG Color #eae8c1 - Increased horizontal padding (px-12) -->
+<section class="py-20 px-12 bg-[#eae8c1] bg-pattern" data-purpose="services-grid">
+<div class="container mx-auto px-6 text-center">
+<span class="text-brand font-bold uppercase tracking-widest text-sm mb-2 block">Services</span>
+<h2 class="text-4xl font-bold text-gray-900 mb-4">What We <span class="text-brand border-b-4 border-brand-light">Offer</span></h2>
+<p class="text-gray-500 max-w-xl mx-auto mb-16">
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
+      </p>
+<div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Service Card 1 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Garden Care" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgDzJ2DzkuXuzw6uwW93xHdH_0b8Lrin9WZ51ly1VRa1L6RXH9LJsLnB4-FE-P9lVR8sJWEnxPsKYyPAtZFFHAe6YJwogn9KbEdWDokfB4vFJbOWsr2zBZt3qsidQi_8ZpmrF1ZBvKDa4AfTfUQi9a1WO-FcCuG1iGdJ5_aB6Gl9TGix98btN8FERZJXyY2Qez9l07_TsR8mxDVPNT-L0Yat4njAeN4HoiGt_ApfknnjHhm2bNU1uUfNG-nHv1PdXQ4-NTtLTPq7E"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<!-- Overlapping Icon -->
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Garden Care</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Stone Scaping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY8PKBftUqlbY0G4dMyWpbZ18a9QfUXdZ0xbOqCDRyEv4jqijXowqjSJoJXs1Emq7WkjrjjoL9nntBSULfuuXkd80LFTmRFzBGxwMXAbRGeYzSEt4hKhLpFEig0Z4HcAh86IjJTbQky8YYzzhLYBEkf9eyWA-94lpm0dH0HXHt5IViJwBM0o1RnOlkFVT7zo4fPPAk1uqQeLRuVc3ncJGzL6kp4TI4TSu6paX0TwQg1JSoZqq35y_fh-2GsJpDysJwgNyYE2Ki8T0"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M19,15V17H15V15H19M19,19V21H15V19H19M13,15V17H9V15H13M13,19V21H9V19H13M7,15V17H3V15H7M7,19V21H3V19H7M21,11V13H3V11H21M21,7V9H3V7H21M21,3V5H3V3H21Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Stone &amp; Hard Scaping</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Cleanup" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFgkbblhSRCnmYAsTkW0EUSM-AslQkQhKlAXDc11sDCR3BN0f2oxaQ9YTPAd1iv-xX9gqR4iHnJlbqitZzMRVj61Yz5f6bi7ZBFZUU7tHvPv01HAdKmlW-j5iDQAZ9NfRMTr_OgxjnTzsxShbXuo5fIYcP39_ateY8jPsoil8xVhcITQneE3yYvjX3e2I7n_salFkILeyTZ3766owmnXnMiKwpkQKeVea6C9f7--xKEeCEtY6676SdkvNTzg9ZxYuogra2djBOSPg"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M22,12L12,22L2,12L12,2L22,12M12,4.83L4.83,12L12,19.17L19.17,12L12,4.83Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Spring &amp; Fall Cleanup</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Irrigation" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnAvO1okTRI9ZqvhhTEVhiWGnplfiU1t2QxvEsPcuy4I7AGjGYJwE4mdEJ8PZQ6KgqDr51d1bWnXVJBXK61JeRijfa6EBcFIm4VAJoR2o6CzyJIGIEesQJYNjzkf6wmzOvCeUpLBcsQBO2tLvXI2vZgrbBDhhgZvWufbJNSdIxkBBC0yfQlTpA-L6P-fkcP_lFikgB24SSEuQGosa-Ggbz7AGRX9VNb4rCWIxXsH7zTSae8gqrYZTHceIBk1zCigPuoU9aTKkh7c"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Watering &amp; Irrigation</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+<!-- Card 5 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Landscaping" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Hid7wb7MNMmNrUqG-k9ToYnizLg9l_sKg_sr4qgeSH8CFsPWug7VwLFmAu4TUfwJqR3w94-tCeTu6F_WPpNFi4X2TMHmvSwyondc-TzNkdidJunt3JpapUpJdj_vw9VeHVktz618_fk6CxCIgWrH0pnSiBCZWTVu0hUbGle3JUfaHMe1BRnS9dsn6cUMohS58GD_KP4PXJ0bT9TCsc53Z2Hu3epIDXCDiTp3D3fkAjIBJaFrhkjzai2PveP1guAPIfF8TRl0C-k"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M14.12,10H19V15H14.12V10M7,10H11.88V15H7V10M3,10H4.88V15H3V10M14.12,17H19V19H14.12V17M7,17H11.88V19H7V17M3,17H4.88V19H3V17M14.12,21H19V22H14.12V21M7,21H11.88V22H7V21M3,21H4.88V22H3V21M3,7H21V8H3V7M3,3H21V5H3V3Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Landscaping</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+<!-- Card 6 -->
+<div class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
+<div class="relative h-64 overflow-hidden rounded-t-xl">
+<img alt="Plantations" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeRN5wuoxHAQq4aqL8Z8NJ_gJ07qvjOtUfVedA5LBaJPcTENM6Ep7ZKgNb1HJRBHdbAOUoAfrvmDmAhYtG-AOLaltAJk9VvS9TvU_bZIq5URUJVmNfReBQuF9UqRPENMHHjHy3kFmiKiSTkO-ziP6qFyvZpuVDFrZ2duB6N39RVKLyjKtUxrLq3sQG6He3mjsCBvXC2TmtaMEgP7f7ft20WlieJewXYSP6GFo_sd_jE-D4jIC3_ENMIGo-CGEkzCEQkQJkHH_QeOs"/>
+</div>
+<div class="relative p-8 pt-12 flex-grow">
+<div class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+<svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24"><path d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5Z"></path></svg>
+</div>
+<h3 class="text-2xl font-bold mb-4">Tree Plantations</h3>
+<p class="text-gray-600 mb-6">There are many variations of passages available but the majority have suffered alteration injected.</p>
+<a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span class="ml-2">→</span></a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- END: ServicesGrid -->
+<!-- BEGIN: IconGridSection - Black Background (bg-[#1a1a1a]) - No side padding increase requested for black bg -->
+<section class="py-20 bg-[#1a1a1a] text-white" data-purpose="icon-grid">
+<div class="container mx-auto px-6 text-center">
+<h2 class="text-4xl font-bold mb-4">Our Services For The</h2>
+<h2 class="text-4xl font-bold text-brand-light mb-16">Garden And Garden Plot</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+<!-- Icon Block 1 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Tree Planting</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+<!-- Icon Block 2 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Flower Scaping</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+<!-- Icon Block 3 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M9 20l-5.447-2.724A2 2 0 013 15.483V6a2 2 0 011.553-1.943l7-1.75a2 2 0 01.894 0l7 1.75A2 2 0 0121 6v9.483a2 2 0 01-1.553 1.793L15 20l-3-3-3 3z" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Garden Design</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+<!-- Icon Block 4 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.065M15 3.033a10.88 10.88 0 11-4.969 0" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Plant Growing</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+<!-- Icon Block 5 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M14.121 14.121L19 19m-7-7l7-7m-7 7l-2.879 2.879M12 12L9.121 9.121m0 5.758L5 19m0-14l4.121 4.121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Branch Cutting</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+<!-- Icon Block 6 -->
+<div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
+<div class="text-brand-light mb-6 flex justify-center">
+<svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+<h3 class="text-xl font-bold mb-4">Grass Cutting</h3>
+<p class="text-gray-400 text-sm">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quas, sunt?</p>
+</div>
+</div>
+</div>
+</section>
+<!-- END: IconGridSection -->
+<!-- BEGIN: CTASection - Increased horizontal padding (px-12) -->
+<section class="relative py-24 px-12 overflow-hidden" data-purpose="call-to-action">
+<img alt="CTA Background" class="absolute inset-0 w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAtDljMTPS_h-RkZGn5Y3LtdaLwV0lt0xh70_0DTlMi_0fUX5fG1V6IdWekji7Gtor8edpnvAaIJGvcI8C3Ty0_747UDU1tmSQY72w9z1UcAONJkmF2O7HJPUZwWMNDRdE4sHUO9_j9Oep7-jkGZKNXTrVskHGfY2135zPqNkCooDpZqKIkM2zJigR9HTQeOPWzekwLj5sel4r4yBaHzf3EX4zTDAA5nXkDKAfto4MxZ5uGmptkkLVByC5h2CW32tz_uj3N_lTD8"/>
+<div class="absolute inset-0 bg-brand/80"></div>
+<div class="container mx-auto px-6 relative z-10 text-center text-white">
+<span class="text-brand-light font-bold uppercase tracking-widest text-sm mb-4 block">• Contact Us For A Free Consultation</span>
+<h2 class="text-4xl md:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight">Get The Best Solution For All Your Needs</h2>
+<p class="text-lg opacity-90 max-w-2xl mx-auto mb-10">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi aliquip ex ea commodo consequat.
+      </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="bg-brand-light text-white font-bold px-10 py-4 rounded-full shadow-lg hover:bg-white hover:text-brand transition-all">Call Now</button>
+<button class="bg-white text-brand font-bold px-10 py-4 rounded-full shadow-lg hover:bg-brand-light hover:text-white transition-all">Contact Us</button>
+</div>
+</div>
+</section>
+<!-- END: CTASection -->
+<!-- BEGIN: EmergencyBar - Increased horizontal padding (px-12) -->
+<section class="bg-brand-dark py-12 px-12 relative overflow-hidden" data-purpose="emergency-bar">
+<div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
+<div class="mb-8 md:mb-0 text-white">
+<h3 class="text-2xl font-bold uppercase mb-2 tracking-tight">Gardner Need &amp; Landscaping</h3>
+<p class="text-brand-light font-medium uppercase text-sm">If you have an Gardner Need, simply call our 24 hour emergency number</p>
+<p class="text-4xl md:text-6xl font-bold mt-4 tracking-tighter">Tel: (719) 445-2808</p>
+</div>
+<button class="bg-brand-accent text-white font-bold px-8 py-4 flex items-center gap-2 hover:bg-orange-600 transition-all">
+<svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z"></path></svg>
+        MAKE AN APPOINTMENT
+      </button>
+</div>
+<!-- Large background leaf icon for styling -->
+<svg class="absolute right-0 bottom-0 w-96 h-96 text-white/5 -mb-20 -mr-20" fill="currentColor" viewbox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path></svg>
+</section>
+<!-- END: EmergencyBar -->
+<!-- BEGIN: Footer -->
+<footer class="bg-[#111111] text-gray-400 pt-20 pb-10" data-purpose="footer">
+<div class="container mx-auto px-6">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+<!-- Brand Info -->
+<div>
+<div class="flex items-center gap-2 mb-6">
+<div class="w-8 h-8 bg-brand rounded-full flex items-center justify-center">
+<svg class="w-5 h-5 text-white" fill="currentColor" viewbox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path></svg>
+</div>
+<span class="text-3xl font-bold text-white">Green</span>
+</div>
+<p class="mb-8 leading-relaxed">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+          </p>
+<div class="flex gap-4">
+<a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.57 14.57,4 16.5,4H19Z"></path></svg></a>
+<a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.59,4 11.64,5.95 11.64,8.35C11.64,8.69 11.67,9.03 11.76,9.36C8.12,9.17 4.91,7.43 2.77,4.77C2.4,5.43 2.19,6.2 2.19,7C2.19,8.5 2.97,9.81 4.14,10.6C3.42,10.58 2.74,10.38 2.15,10.05V10.1C2.15,12.18 3.63,13.92 5.61,14.31C5.25,14.41 4.87,14.46 4.48,14.46C4.2,14.46 3.93,14.43 3.67,14.38C4.22,16.08 5.8,17.32 7.67,17.35C6.2,18.5 4.35,19.19 2.33,19.19C1.98,19.19 1.64,19.17 1.3,19.13C3.2,20.35 5.46,21.06 7.89,21.06C15.79,21.06 20.12,14.5 20.12,8.83C20.12,8.65 20.12,8.47 20.11,8.28C20.95,7.67 21.67,6.9 22.46,6Z"></path></svg></a>
+<a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.73,18.78 17.93,18.84C17.13,18.91 16.44,18.94 15.84,18.94L15,19C12.81,19 11.2,18.84 10.17,18.56C9.27,18.31 8.69,17.73 8.44,16.83C8.31,16.36 8.22,15.73 8.16,14.93C8.09,14.13 8.06,13.44 8.06,12.84L8,12C8,9.81 8.16,8.2 8.44,7.17C8.69,6.27 9.27,5.69 10.17,5.44C10.64,5.31 11.27,5.22 12.07,5.16C12.87,5.09 13.56,5.06 14.16,5.06L15,5C17.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z"></path></svg></a>
+<a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white" href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24"><path d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z"></path></svg></a>
+</div>
+</div>
+<!-- Our Services -->
+<div>
+<h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Our Services</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Garden Maintenance</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Design &amp; Build</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Garden Clearance</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Fence installation</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Landscaping Design</a></li>
+</ul>
+</div>
+<!-- Useful Links -->
+<div>
+<h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Useful Links</h4>
+<ul class="space-y-4">
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> About Us</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Projects</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Contact Us</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Privacy Policy</a></li>
+<li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Terms &amp; Conditions</a></li>
+</ul>
+</div>
+<!-- Contact Info -->
+<div>
+<h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Contact Info</h4>
+<ul class="space-y-6">
+<li class="flex items-start gap-4">
+<div class="text-brand-light pt-1"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div>
+<p class="text-white font-semibold">Phone</p>
+<p>080 707 555-321</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="text-brand-light pt-1"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div>
+<p class="text-white font-semibold">Email</p>
+<p>demo@example.com</p>
+</div>
+</li>
+<li class="flex items-start gap-4">
+<div class="text-brand-light pt-1"><svg class="w-6 h-6" fill="none" stroke="currentColor" viewbox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path><path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg></div>
+<div>
+<p class="text-white font-semibold">Address</p>
+<p>526 Melrose Street, Water Mill, 11976 New York</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-white/5 pt-10 flex flex-col md:row items-center justify-between text-sm">
+<p>© 2024 Green - All Rights Reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-brand-light" href="#">Terms &amp; Conditions</a>
+<a class="hover:text-brand-light" href="#">Privacy Policy</a>
+</div>
+</div>
+</div>
+</footer>
+<!-- END: Footer -->
+<!-- BEGIN: ChatWidget (Visual only) -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
+<div class="bg-indigo-600 p-4 rounded-full shadow-xl text-white cursor-pointer hover:scale-110 transition-transform">
+<svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"></svg></div></div></body></html>
