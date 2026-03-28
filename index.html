@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Green - Gardening and Landscaping Services</title>
+  <title>Star Jardins - Gardening and Landscaping Services</title>
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <!-- Google Fonts: Montserrat for all text -->
@@ -28,6 +28,10 @@
         }
       }
     }
+  </script>
+  <script>
+    // Variável global para alterar o número do WhatsApp em todo o site
+    const NUMERO_WHATSAPP = "5511977798272";
   </script>
   <style data-purpose="custom-styles">
     /* Custom overlay for hero visibility */
@@ -78,8 +82,8 @@
       </ul>
       <!-- CTA Button -->
       <div class="hidden lg:block">
-        <a class="bg-brand-light hover:bg-brand text-white px-6 py-3 rounded-md font-semibold transition-all"
-          href="#">Peça um Orçamento</a>
+        <a class="bg-brand-light hover:bg-brand text-white px-6 py-3 rounded-md font-semibold transition-all link-whatsapp"
+          href="#" data-wa-msg="Olá, preciso de um orçamento..." target="_blank">Peça um Orçamento</a>
       </div>
       <!-- Mobile Menu Icon (Placeholder) -->
       <div class="md:hidden text-white">
@@ -107,12 +111,12 @@
         manutenção, paisagismo e conservação de áreas verdes.
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <button
-          class="bg-white text-brand font-bold px-8 py-4 rounded-full hover:bg-brand-light hover:text-white transition-all">Saiba
-          Mais</button>
-        <button
-          class="border-2 border-brand-light bg-brand-light/20 text-white font-bold px-8 py-4 rounded-full hover:bg-brand-light transition-all">
-          Contatos</button>
+        <a href="#servicos"
+          class="bg-white text-brand font-bold px-8 py-4 rounded-full hover:bg-brand-light hover:text-white transition-all flex items-center justify-center">
+          Saiba Mais</a>
+        <a href="#contatos"
+          class="border-2 border-brand-light bg-brand-light/20 text-white font-bold px-8 py-4 rounded-full hover:bg-brand-light transition-all flex items-center justify-center">
+          Contatos</a>
       </div>
     </div>
   </section>
@@ -124,8 +128,13 @@
         <!-- Feature 1 -->
         <div class="flex items-start gap-4">
           <div class="bg-white/20 p-4 rounded-full shrink-0">
+            <!-- Ícone anterior:
             <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
               <path d="M12,2L4.5,20.29L5.21,21L12,18L18.79,21L19.5,20.29L12,2Z"></path>
+            </svg>
+            -->
+            <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+              <path d="M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V8H19V19M16.53,11.06L15.47,10L10.59,14.88L8.47,12.76L7.41,13.82L10.59,17L16.53,11.06Z"></path>
             </svg>
           </div>
           <div>
@@ -137,10 +146,15 @@
         <!-- Feature 2 -->
         <div class="flex items-start gap-4">
           <div class="bg-white/20 p-4 rounded-full shrink-0">
+            <!-- Ícone anterior:
             <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
               <path
                 d="M15,12L12,15L9,12L12,9L15,12M22,12A10,10 0 0,1 12,22A10,10 0 0,1 2,12A10,10 0 0,1 12,2A10,10 0 0,1 22,12Z">
               </path>
+            </svg>
+            -->
+            <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+              <path d="M10,21V18H3L8,11H5L12,2L19,11H16L21,18H14V21H10Z"></path>
             </svg>
           </div>
           <div>
@@ -152,8 +166,13 @@
         <!-- Feature 3 -->
         <div class="flex items-start gap-4">
           <div class="bg-white/20 p-4 rounded-full shrink-0">
+            <!-- Ícone anterior:
             <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
               <path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path>
+            </svg>
+            -->
+            <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+              <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L5,12L6.41,10.59L10,14.17L17.59,6.58L19,8L10,17Z"></path>
             </svg>
           </div>
           <div>
@@ -186,8 +205,9 @@
             Confie em quem entende da arte de cultivar para fazer o seu espaço brilhar com o máximo cuidado e que não
             não poupa <strong>capricho em cada detalhe</strong>.
           </p>
-          <button class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all">Conheça
-            Mais...</button>
+          <a href="#servicos"
+            class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all flex w-[40%] items-center justify-center mr-auto">
+            Conheça Mais...</a>
         </div>
         <div class="lg:w-1/2 relative">
           <!-- Main Image -->
@@ -223,17 +243,23 @@
             <!-- Overlapping Icon -->
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path>
               </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a2 2 0 0 0-2.83 0L10 9.83l4.17 4.17 6.54-6.54a2 2 0 0 0 0-2.83z"></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Design<br>Impecável</h3>
+            <h3 class="text-2xl font-bold mb-4">Design Impecável</h3>
             <p class="text-gray-600 mb-6">Projetamos todos os espaços que valorizarão seu imóvel e transformarão sua
               área verde
               num
               refúgio de beleza e bom gosto.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
         <!-- Card 2 -->
@@ -247,18 +273,24 @@
           <div class="relative p-8 pt-12 flex-grow">
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path
                   d="M19,15V17H15V15H19M19,19V21H15V19H19M13,15V17H9V15H13M13,19V21H9V19H13M7,15V17H3V15H7M7,19V21H3V19H7M21,11V13H3V11H21M21,7V9H3V7H21M21,3V5H3V3H21Z">
                 </path>
+              </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 7 11.5 7 11.5C7 11.5 10.9 10.76 17 8Z"></path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Revitalização de Jardins</h3>
             <p class="text-gray-600 mb-6">Resgatamos a beleza de áreas degradadas, restaurando o brilho e a vivacidade
               ao
               seu patrimônio em tempo recorde.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
         <!-- Card 3 -->
@@ -272,15 +304,21 @@
           <div class="relative p-8 pt-12 flex-grow">
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path d="M22,12L12,22L2,12L12,2L22,12M12,4.83L4.83,12L12,19.17L19.17,12L12,4.83Z"></path>
               </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M11 20H13V15.79C16.03 15.35 20.5 13.56 20.5 8C20.5 5.61 19.5 2 19.5 2S18.5 2.5 17.5 3C15 4.29 13 7.37 13 10V11H11V10C11 7.37 9 4.29 6.5 3C5.5 2.5 4.5 2 4.5 2S3.5 5.61 3.5 8C3.5 13.56 7.97 15.35 11 15.79V20Z"></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Suplementação adequada</h3>
+            <h3 class="text-2xl font-bold mb-4">Suplementação Adequada</h3>
             <p class="text-gray-600 mb-6">Devolvemos o vigor às plantas com nutrição de alta performance, garantindo
               flores vibrantes e verde intenso o ano todo.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
         <!-- Card 4 -->
@@ -294,15 +332,21 @@
           <div class="relative p-8 pt-12 flex-grow">
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path d="M12,2C12,2 7,8 7,12C7,14.76 9.24,17 12,17C14.76,17 17,14.76 17,12C17,8 12,2 12,2Z"></path>
               </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"></path>
+              </svg>
             </div>
-            <h3 class="text-2xl font-bold mb-4">Manutenção<br>VIP</h3>
+            <h3 class="text-2xl font-bold mb-4">Manutenção VIP</h3>
             <p class="text-gray-600 mb-6">Cronograma personalizado para um jardim sempre reluzente e pronto para uso,
               sem que você precise mover um dedo.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
         <!-- Card 5 -->
@@ -316,17 +360,23 @@
           <div class="relative p-8 pt-12 flex-grow">
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path
                   d="M14.12,10H19V15H14.12V10M7,10H11.88V15H7V10M3,10H4.88V15H3V10M14.12,17H19V19H14.12V17M7,17H11.88V19H7V17M3,17H4.88V19H3V17M14.12,21H19V22H14.12V21M7,21H11.88V22H7V21M3,21H4.88V22H3V21M3,7H21V8H3V7M3,3H21V5H3V3Z">
                 </path>
               </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M12 1L3 5V11C3 16.55 6.84 21.74 12 23C17.16 21.74 21 16.55 21 11V5L12 1Z"></path>
+              </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Blindagem Fitossanitária</h3>
             <p class="text-gray-600 mb-6">Proteção contra pragas e doenças com diagnósticos precisos, mantendo a
               vida e o investimento do seu jardim seguros.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
         <!-- Card 6 -->
@@ -340,18 +390,24 @@
           <div class="relative p-8 pt-12 flex-grow">
             <div
               class="absolute -top-8 left-1/2 -translate-x-1/2 bg-brand text-white p-4 rounded-full border-4 border-white shadow-md z-10">
+              <!-- Ícone anterior:
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
                 <path
                   d="M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5Z">
                 </path>
+              </svg>
+              -->
+              <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+                <path d="M12 20A6 6 0 0 1 6 14C6 10 12 3.25 12 3.25S18 10 18 14A6 6 0 0 1 12 20Z"></path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Irrigação Inteligente</h3>
             <p class="text-gray-600 mb-6">Sistemas automatizados que garantem a hidratação exata para cada planta,
               árvore ou campo, mesmo
               durante suas viagens.</p>
-            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all" href="#">Read More <span
-                class="ml-2">→</span></a>
+            <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
+              href="https://instagram.com" target="_blank">Saiba mais
+              <span class="ml-2">→</span></a>
           </div>
         </div>
       </div>
@@ -361,7 +417,7 @@
   <!-- BEGIN: IconGridSection - Black Background (bg-[#1a1a1a]) - No side padding increase requested for black bg -->
   <section class="py-20 bg-[#1a1a1a] text-white" data-purpose="icon-grid">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-4">Palavras que traduzem</h2>
+      <h2 class="text-4xl font-bold mb-1">Palavras que traduzem</h2>
       <h2 class="text-4xl font-bold text-brand-light mb-16">nossa marca e nosso trabalho</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Icon Block 1 -->
@@ -416,10 +472,8 @@
         <!-- Icon Block 5 -->
         <div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
           <div class="text-brand-light mb-6 flex justify-center">
-            <svg class="w-16 h-16" fill="none" stroke="currentColor" viewbox="0 0 24 24">
-              <path
-                d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-1.04 1.08l1.053 5.378c.115.588-.507 1.036-.975.766L12 18.324a.563.563 0 00-.528.005l-4.708 2.651c-.469.264-1.088-.172-.975-.758l1.053-5.385a.562.562 0 00-.164-.52L2.478 10.38c-.38-.323-.178-.948.322-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z"
-                stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+            <svg class="w-16 h-16" fill="currentColor" viewbox="0 0 24 24">
+              <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"></path>
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-4">Exclusividade</h3>
@@ -441,6 +495,40 @@
     </div>
   </section>
   <!-- END: IconGridSection -->
+  <!-- BEGIN: Instagram Section -->
+  <section id="midias" class="py-20 bg-white px-12" data-purpose="instagram-section">
+    <div class="container mx-auto px-14 flex flex-col md:flex-row items-center justify-center gap-16">
+      <div class="md:w-1/2 text-center md:text-left">
+        <span
+          class="text-brand font-bold uppercase tracking-widest text-sm flex items-center justify-center md:justify-start gap-2 mb-4">
+          <span class="w-2 h-2 bg-brand rounded-full"></span> Redes Sociais
+        </span>
+        <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+          Acompanhe no Instagram
+        </h2>
+        <p class="text-gray-600 mb-8 leading-relaxed text-lg">
+          Siga nosso Instagram e venha conhecer um pouco mais <strong>do nosso trabalho</strong>!
+          Lá você encontrará vídeos, fotos de transformações ao vivo e muito mais informações sobre cada projeto de
+          paisagismo que realizamos.
+        </p>
+        <a href="https://instagram.com" target="_blank"
+          class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all inline-flex items-center justify-center">
+          Conheça nosso perfil
+        </a>
+      </div>
+      <div class="md:w-1/2 flex justify-center">
+        <a href="https://instagram.com" target="_blank"
+          class="text-brand-dark hover:text-brand transition-all hover:scale-105 transform duration-300">
+          <svg class="w-[254px] h-[254px]" fill="currentColor" viewbox="0 0 24 24">
+            <path
+              d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
+            </path>
+          </svg>
+        </a>
+      </div>
+    </div>
+  </section>
+  <!-- END: Instagram Section -->
   <!-- BEGIN: CTASection - Increased horizontal padding (px-12) -->
   <section id="contatos" class="relative py-24 px-12 overflow-hidden" data-purpose="call-to-action">
     <img alt="CTA Background" class="absolute inset-0 w-full h-full object-cover"
@@ -458,17 +546,17 @@
         com economia e perfeição!
       </p>
       <div class="flex flex-col sm:flex-row justify-center gap-4">
-        <button
-          class="bg-brand-light text-white font-bold px-10 py-4 rounded-full shadow-lg hover:bg-white hover:text-brand transition-all">Whatsapp</button>
-        <button
-          class="bg-white text-brand font-bold px-10 py-4 rounded-full shadow-lg hover:bg-brand-light hover:text-white transition-all">Nosso
-          Email</button>
+        <a href="#" target="_blank"
+          class="bg-brand-light text-white font-bold px-10 py-4 rounded-full shadow-lg hover:bg-white hover:text-brand transition-all flex items-center justify-center link-whatsapp">Whatsapp</a>
+        <a href="mailto:starjardinagempaisagismo@gmail.com"
+          class="bg-white text-brand font-bold px-10 py-4 rounded-full shadow-lg hover:bg-brand-light hover:text-white transition-all flex items-center justify-center">Nosso
+          Email</a>
       </div>
     </div>
   </section>
   <!-- END: CTASection -->
   <!-- BEGIN: EmergencyBar - Increased horizontal padding (px-12) -->
-  <section class="bg-brand-dark py-12 px-12 relative overflow-hidden" data-purpose="emergency-bar">
+  <section class="bg-brand-dark py-20 px-12 relative overflow-hidden" data-purpose="emergency-bar">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
       <div class="mb-8 md:mb-0 text-white">
         <h3 class="text-2xl font-bold uppercase mb-2 tracking-tight">Agende uma visita sem compromisso</h3>
@@ -476,15 +564,15 @@
           telefone ou Whatsapp:</p>
         <p class="text-4xl md:text-6xl font-bold mt-4 tracking-tighter">Tel: (11) 97779-8272</p>
       </div>
-      <button
-        class="bg-brand-accent text-white font-bold px-8 py-4 flex items-center gap-2 hover:bg-orange-600 transition-all">
+      <a href="#" target="_blank"
+        class="bg-brand-accent text-white font-bold px-8 py-4 flex items-center gap-2 hover:bg-orange-600 transition-all link-whatsapp">
         <svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
           <path
             d="M19,19H5V8H19M16,1V3H8V1H6V3H5C3.89,3 3,3.89 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3H18V1M17,12H12V17H17V12Z">
           </path>
         </svg>
         Mande sua Mensagem
-      </button>
+      </a>
     </div>
     <!-- Large background leaf icon for styling -->
     <svg class="absolute right-0 bottom-0 w-96 h-96 text-white/5 -mb-20 -mr-20" fill="currentColor" viewbox="0 0 24 24">
@@ -508,72 +596,72 @@
                 </path>
               </svg>
             </div>
-            <span class="text-3xl font-bold text-white">Green</span>
+            <span class="text-3xl font-bold text-white">Star Jardins</span>
           </div>
           <p class="mb-8 leading-relaxed">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-            dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.
+            Transformamos espaços externos em ambientes harmoniosos e bem cuidados, com serviços especializados em
+            manutenção, paisagismo e conservação de áreas verdes.
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white"
-              href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M19,4V7H17A1,1 0 0,0 16,8V10H19V13H16V20H13V13H11V10H13V7.5C13,5.57 14.57,4 16.5,4H19Z"></path>
-              </svg></a>
-            <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white"
-              href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+              href="https://instagram.com" target="_blank"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
                 <path
-                  d="M22.46,6C21.69,6.35 20.86,6.58 20,6.69C20.88,6.16 21.56,5.32 21.88,4.31C21.05,4.81 20.13,5.16 19.16,5.36C18.37,4.5 17.26,4 16,4C13.59,4 11.64,5.95 11.64,8.35C11.64,8.69 11.67,9.03 11.76,9.36C8.12,9.17 4.91,7.43 2.77,4.77C2.4,5.43 2.19,6.2 2.19,7C2.19,8.5 2.97,9.81 4.14,10.6C3.42,10.58 2.74,10.38 2.15,10.05V10.1C2.15,12.18 3.63,13.92 5.61,14.31C5.25,14.41 4.87,14.46 4.48,14.46C4.2,14.46 3.93,14.43 3.67,14.38C4.22,16.08 5.8,17.32 7.67,17.35C6.2,18.5 4.35,19.19 2.33,19.19C1.98,19.19 1.64,19.17 1.3,19.13C3.2,20.35 5.46,21.06 7.89,21.06C15.79,21.06 20.12,14.5 20.12,8.83C20.12,8.65 20.12,8.47 20.11,8.28C20.95,7.67 21.67,6.9 22.46,6Z">
+                  d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
                 </path>
               </svg></a>
             <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white"
-              href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+              href="mailto:starjardinagempaisagismo@gmail.com"><svg class="w-5 h-5" fill="currentColor"
+                viewbox="0 0 24 24">
                 <path
-                  d="M10,15L15.19,12L10,9V15M21.56,7.17C21.69,7.64 21.78,8.27 21.84,9.07C21.91,9.87 21.94,10.56 21.94,11.16L22,12C22,14.19 21.84,15.8 21.56,16.83C21.31,17.73 20.73,18.31 19.83,18.56C19.36,18.69 18.73,18.78 17.93,18.84C17.13,18.91 16.44,18.94 15.84,18.94L15,19C12.81,19 11.2,18.84 10.17,18.56C9.27,18.31 8.69,17.73 8.44,16.83C8.31,16.36 8.22,15.73 8.16,14.93C8.09,14.13 8.06,13.44 8.06,12.84L8,12C8,9.81 8.16,8.2 8.44,7.17C8.69,6.27 9.27,5.69 10.17,5.44C10.64,5.31 11.27,5.22 12.07,5.16C12.87,5.09 13.56,5.06 14.16,5.06L15,5C17.19,5 18.8,5.16 19.83,5.44C20.73,5.69 21.31,6.27 21.56,7.17Z">
+                  d="M22 6C22 4.9 21.1 4 20 4H4C2.9 4 2 4.9 2 6V18C2 19.1 2.9 20 4 20H20C21.1 20 22 19.1 22 18V6M20 6L12 11L4 6H20M20 18H4V8L12 13L20 8V18Z">
                 </path>
               </svg></a>
-            <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white"
-              href="#"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+            <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white link-whatsapp"
+              href="https://wa.me/5511977798272" target="_blank"><svg class="w-5 h-5" fill="currentColor"
+                viewbox="0 0 24 24">
                 <path
-                  d="M19,3A2,2 0 0,1 21,5V19A2,2 0 0,1 19,21H5A2,2 0 0,1 3,19V5A2,2 0 0,1 5,3H19M18.5,18.5V13.2A3.26,3.26 0 0,0 15.24,9.94C14.39,9.94 13.4,10.46 12.92,11.24V10.13H10.13V18.5H12.92V13.57C12.92,12.8 13.54,12.17 14.31,12.17A1.4,1.4 0 0,1 15.71,13.57V18.5H18.5M6.88,8.56A1.68,1.68 0 0,0 8.56,6.88C8.56,5.95 7.81,5.19 6.88,5.19A1.69,1.69 0 0,0 5.19,6.88C5.19,7.81 5.95,8.56 6.88,8.56M8.27,18.5V10.13H5.5V18.5H8.27Z">
+                  d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15.09 3.81 13.55 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 13.96C16.31 13.81 15.08 13.21 14.87 13.13C14.66 13.04 14.5 13 14.34 13.25C14.18 13.5 13.72 14 13.56 14.21C13.41 14.42 13.25 14.44 13 14.3C12.75 14.15 11.96 13.88 11.04 13.06C10.33 12.43 9.85 11.64 9.71 11.4C9.57 11.16 9.69 11.03 9.81 10.91C9.92 10.8 10.06 10.61 10.18 10.46C10.3 10.31 10.35 10.2 10.42 10.04C10.5 9.88 10.46 9.75 10.4 9.62C10.34 9.5 9.86 8.35 9.66 7.88C9.46 7.43 9.27 7.48 9.13 7.48C9 7.48 8.84 7.46 8.68 7.46H8.53Z">
                 </path>
               </svg></a>
           </div>
         </div>
         <!-- Our Services -->
         <div>
-          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Our Services</h4>
+          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Nossos Serviços</h4>
           <ul class="space-y-4">
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Garden
-                Maintenance</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Design
-                &amp; Build</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Garden
-                Clearance</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Fence
-                installation</a></li>
             <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
-                Landscaping Design</a></li>
+                Revitalização de Áreas Verdes</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
+                Manutenção de Jardins</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
+                Limpeza de Terrenos</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
+                Paisagismo</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
+                Blindagem Fitossanitária</a></li>
           </ul>
         </div>
         <!-- Useful Links -->
         <div>
-          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Useful Links</h4>
+          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Nossos Links</h4>
           <ul class="space-y-4">
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> About
-                Us</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span>
-                Projects</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Contact
-                Us</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Privacy
-                Policy</a></li>
-            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#"><span>•</span> Terms
-                &amp; Conditions</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#sobrenos"><span>•</span>
+                Sobre Nós</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#contatos"><span>•</span>
+                Contatos</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2 link-whatsapp" href="#"
+                data-wa-msg="Olá, preciso de um orçamento..." target="_blank"><span>•</span>
+                Orçamentos</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2 link-whatsapp" href="#"
+                data-wa-msg="Olá, gostaria de fazer um agendamento sem compromisso..." target="_blank"><span>•</span>
+                Agende uma Visita</a></li>
+            <li><a class="hover:text-brand-light transition-all flex items-center gap-2" href="#midias"><span>•</span>
+                Redes Sociais</a></li>
           </ul>
         </div>
         <!-- Contact Info -->
         <div>
-          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Contact Info</h4>
+          <h4 class="text-xl font-bold text-white mb-8 border-l-4 border-brand-light pl-4">Contatos</h4>
           <ul class="space-y-6">
             <li class="flex items-start gap-4">
               <div class="text-brand-light pt-1"><svg class="w-6 h-6" fill="none" stroke="currentColor"
@@ -583,8 +671,8 @@
                     stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
                 </svg></div>
               <div>
-                <p class="text-white font-semibold">Phone</p>
-                <p>080 707 555-321</p>
+                <p class="text-white font-semibold">Telefone</p>
+                <p>(11) 97779-8272</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
@@ -596,7 +684,7 @@
                 </svg></div>
               <div>
                 <p class="text-white font-semibold">Email</p>
-                <p>demo@example.com</p>
+                <p>starjardinagempaisagismo@gmail.com</p>
               </div>
             </li>
             <li class="flex items-start gap-4">
@@ -608,29 +696,44 @@
                     stroke-width="2"></path>
                 </svg></div>
               <div>
-                <p class="text-white font-semibold">Address</p>
-                <p>526 Melrose Street, Water Mill, 11976 New York</p>
+                <p class="text-white font-semibold">Endereço do Escritório:</p>
+                <p>Rua Alemanha, 1755, Vila Camilópolis, Santo André - SP, 09240-001</p>
               </div>
             </li>
           </ul>
         </div>
       </div>
-      <div class="border-t border-white/5 pt-10 flex flex-col md:row items-center justify-between text-sm">
-        <p>© 2024 Green - All Rights Reserved.</p>
+      <div class="border-t border-white/5 flex flex-col md:row items-center justify-between text-sm">
+        <p>© 2026 Star Jardins - Todos os direitos reservados.</p>
         <div class="flex gap-6 mt-4 md:mt-0">
-          <a class="hover:text-brand-light" href="#">Terms &amp; Conditions</a>
-          <a class="hover:text-brand-light" href="#">Privacy Policy</a>
+          <a class="hover:text-brand-light" href="#">Termos &amp; Condições</a>
+          <a class="hover:text-brand-light" href="#">Política de Privacidade</a>
         </div>
       </div>
     </div>
   </footer>
   <!-- END: Footer -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const links = document.querySelectorAll('.link-whatsapp');
+      links.forEach(link => {
+        let url = `https://api.whatsapp.com/send/?phone=${NUMERO_WHATSAPP}`;
+        const msg = link.getAttribute('data-wa-msg');
+        if (msg) {
+          url += `&text=${encodeURIComponent(msg)}`;
+        }
+        link.href = url;
+      });
+    });
+  </script>
   <!-- BEGIN: ChatWidget (Visual only) -->
   <div class="fixed bottom-6 right-6 z-50 flex flex-col gap-3">
-    <div
-      class="bg-indigo-600 p-4 rounded-full shadow-xl text-white cursor-pointer hover:scale-110 transition-transform">
-      <svg class="w-6 h-6" fill="currentColor" viewbox="0 0 24 24"></svg>
-    </div>
+    <a href="#" target="_blank" data-wa-msg="Olá! Vi o site e gostaria de falar com a equipe da Star Jardins."
+      class="bg-white p-4 rounded-full shadow-xl text-[#25D366] cursor-pointer hover:scale-110 transition-transform link-whatsapp">
+      <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
+        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15.09 3.81 13.55 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 13.96C16.31 13.81 15.08 13.21 14.87 13.13C14.66 13.04 14.5 13 14.34 13.25C14.18 13.5 13.72 14 13.56 14.21C13.41 14.42 13.25 14.44 13 14.3C12.75 14.15 11.96 13.88 11.04 13.06C10.33 12.43 9.85 11.64 9.71 11.4C9.57 11.16 9.69 11.03 9.81 10.91C9.92 10.8 10.06 10.61 10.18 10.46C10.3 10.31 10.35 10.2 10.42 10.04C10.5 9.88 10.46 9.75 10.4 9.62C10.34 9.5 9.86 8.35 9.66 7.88C9.46 7.43 9.27 7.48 9.13 7.48C9 7.48 8.84 7.46 8.68 7.46H8.53Z"></path>
+      </svg>
+    </a>
   </div>
 </body>
 
