@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-  <title>Star Jardins - Gardening and Landscaping Services</title>
+  <title>Star Jardins - Jardinagem e Paisagismo</title>
   <!-- Tailwind CSS v3 CDN -->
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <!-- Google Fonts: Montserrat for all text -->
@@ -28,11 +28,12 @@
         }
       }
     }
-  </script>
-  <script>
+
     // Variável global para alterar o número do WhatsApp em todo o site
     const NUMERO_WHATSAPP = "5511977798272";
   </script>
+
+
   <style data-purpose="custom-styles">
     /* Custom overlay for hero visibility */
     .hero-overlay {
@@ -46,6 +47,23 @@
     /* Smooth transition for hover effects */
     .transition-all {
       transition: all 0.3s ease-in-out
+    }
+
+    /* Delayed fade-in for Hero Section text */
+    @keyframes fadeInDelayed {
+      0% {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .animate-hero-text {
+      animation: fadeInDelayed 2s cubic-bezier(0.25, 1, 0.5, 1) 0.3s both;
     }
 
     /* Background textures */
@@ -99,14 +117,18 @@
     class="relative h-[75vh] min-h-[500px] flex items-center justify-center text-center text-white overflow-hidden"
     data-purpose="hero">
     <!-- Background Image -->
+    <!-- <img alt="Gardening Hero" class="absolute inset-0 w-full h-full object-cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDyC3WJ7hZ_Y_A3JBHxBCmp-H1Np9RjU8uPBLpPLgC0hQ61gmJZQTCQaUXaVSp7BOEqyd6G78I_aGNxrbH5__6ADBDGvM6ha_ERB292uwQt7i8Z6NR0ZOeXQ4koApZz5PSZH3foDCWBObx_yYlf2k4MYmiM2p63Mgf_0RHf9k62p6mawec1rQuIYg8l1qfVkaUUDPiKCyxeVhv4eKMK59u7BaZDacq-kZj5x5jJZi8c_qP5m8HHYdjTvjfvLQ9vR0X0-NX5YnjwC0" /> -->
     <img alt="Gardening Hero" class="absolute inset-0 w-full h-full object-cover"
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDyC3WJ7hZ_Y_A3JBHxBCmp-H1Np9RjU8uPBLpPLgC0hQ61gmJZQTCQaUXaVSp7BOEqyd6G78I_aGNxrbH5__6ADBDGvM6ha_ERB292uwQt7i8Z6NR0ZOeXQ4koApZz5PSZH3foDCWBObx_yYlf2k4MYmiM2p63Mgf_0RHf9k62p6mawec1rQuIYg8l1qfVkaUUDPiKCyxeVhv4eKMK59u7BaZDacq-kZj5x5jJZi8c_qP5m8HHYdjTvjfvLQ9vR0X0-NX5YnjwC0" />
+      src="star jardim jardinagem e paisagismo ABC Santo Andre São Bernardo São Caetano do Sul Mauá.png" />
     <div class="absolute inset-0 hero-overlay"></div>
-    <div class="relative z-10 max-w-4xl px-6">
+    <div class="relative z-10 max-w-4xl px-6 animate-hero-text">
       <h4 class="uppercase tracking-widest text-brand-light font-bold mt-10 mb-4">Star Jardins</h4>
-      <h1 class="text-3xl md:text-5xl font-bold mb-6 text-shadow">O melhor serviço de jardinagem
+      <h1 class="text-3xl md:text-5xl font-bold mb-6" style="text-shadow: 2px 4px 8px rgba(0,0,0,0.9);">O melhor serviço
+        de jardinagem
         residencial, condominial e comercial</h1>
-      <p class="text-lg md:text-xl mb-10 opacity-90 max-w-2xl mx-auto">
+      <p class="text-lg md:text-xl mb-10 opacity-100 max-w-2xl mx-auto"
+        style="text-shadow: 1px 2px 6px rgba(0,0,0,0.9);">
         Transformamos espaços externos em ambientes harmoniosos e bem cuidados, com serviços especializados em
         manutenção, paisagismo e conservação de áreas verdes.
       </p>
@@ -122,7 +144,7 @@
   </section>
   <!-- END: HeroSection -->
   <!-- BEGIN: HighlightFeatures - Increased horizontal padding (px-12) -->
-  <section class="bg-brand py-12 px-12" data-purpose="features">
+  <section class="bg-brand py-12 px-0 md:px-12" data-purpose="features">
     <div class="container mx-auto px-6">
       <div class="grid md:grid-cols-3 gap-8 text-white">
         <!-- Feature 1 -->
@@ -134,7 +156,9 @@
             </svg>
             -->
             <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-              <path d="M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V8H19V19M16.53,11.06L15.47,10L10.59,14.88L8.47,12.76L7.41,13.82L10.59,17L16.53,11.06Z"></path>
+              <path
+                d="M19,3H18V1H16V3H8V1H6V3H5C3.89,3 3,3.9 3,5V19A2,2 0 0,0 5,21H19A2,2 0 0,0 21,19V5C21,3.89 20.1,3 19,3M19,19H5V8H19V19M16.53,11.06L15.47,10L10.59,14.88L8.47,12.76L7.41,13.82L10.59,17L16.53,11.06Z">
+              </path>
             </svg>
           </div>
           <div>
@@ -172,7 +196,9 @@
             </svg>
             -->
             <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-              <path d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L5,12L6.41,10.59L10,14.17L17.59,6.58L19,8L10,17Z"></path>
+              <path
+                d="M12,1L3,5V11C3,16.55 6.84,21.74 12,23C17.16,21.74 21,16.55 21,11V5L12,1M10,17L5,12L6.41,10.59L10,14.17L17.59,6.58L19,8L10,17Z">
+              </path>
             </svg>
           </div>
           <div>
@@ -187,7 +213,7 @@
   </section>
   <!-- END: HighlightFeatures -->
   <!-- BEGIN: AboutSection - Increased horizontal padding (px-12) -->
-  <section id="sobrenos" class="py-20 bg-white px-12" data-purpose="about">
+  <section id="sobrenos" class="py-20 bg-white px-0 md:px-12" data-purpose="about">
     <div class="container mx-auto px-6">
       <div class="flex flex-col lg:flex-row items-center gap-16">
         <div class="lg:w-1/2">
@@ -206,13 +232,15 @@
             não poupa <strong>capricho em cada detalhe</strong>.
           </p>
           <a href="#servicos"
-            class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all flex w-[40%] items-center justify-center mr-auto">
+            class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all flex w-[70%] mx-auto md:w-[40%] md:ml-0 md:mr-auto items-center justify-center">
             Conheça Mais...</a>
         </div>
         <div class="lg:w-1/2 relative">
           <!-- Main Image -->
-          <img alt="Gardener" class="rounded-lg shadow-2xl"
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRCGOG5ItZlZEMB98V-nOvWCEjLwVcOHset7xZif73EHmO4CDMNb-htkAKFIEVY17--3RVuf8SgTx5AhT0GoFdfbPzEUsCmY_g4CoXMS2kD9-H4OtAUiBoTG5RoZ-ePWuwV7SoNFKj83w1uTIBlNYEGtpDEowzz23kQYf4CF5BWgoBuoRs1QwrYzFfsZ3TbTAKEnSbuM-1kytbUnDVWKdUaRHcDEI6xqBx8z6VhVC35_y4tGQ7L2EMf2pdtTioPiLGztOSYzbpE-U" />
+          <!-- <img alt="Gardener" class="rounded-lg shadow-2xl"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRCGOG5ItZlZEMB98V-nOvWCEjLwVcOHset7xZif73EHmO4CDMNb-htkAKFIEVY17--3RVuf8SgTx5AhT0GoFdfbPzEUsCmY_g4CoXMS2kD9-H4OtAUiBoTG5RoZ-ePWuwV7SoNFKj83w1uTIBlNYEGtpDEowzz23kQYf4CF5BWgoBuoRs1QwrYzFfsZ3TbTAKEnSbuM-1kytbUnDVWKdUaRHcDEI6xqBx8z6VhVC35_y4tGQ7L2EMf2pdtTioPiLGztOSYzbpE-U" /> -->
+          <img alt="Gardening Hero" class="rounded-lg shadow-2xl"
+            src="star jardinagem e paisagismo jardim residencial.png" />
           <!-- Decorative Shape -->
           <div class="absolute -bottom-6 -left-6 w-32 h-32 bg-brand/10 -z-10 rounded-full"></div>
         </div>
@@ -221,7 +249,7 @@
   </section>
   <!-- END: AboutSection -->
   <!-- BEGIN: ServicesGrid - BG Color #eae8c1 - Increased horizontal padding (px-12) -->
-  <section id="servicos" class="py-20 px-12 bg-[#eae8c1]" data-purpose="services-grid">
+  <section id="servicos" class="py-20 px-0 md:px-12 bg-[#eae8c1]" data-purpose="services-grid">
     <div class="container mx-auto px-6 text-center">
       <span class="text-brand font-bold uppercase tracking-widest text-sm mb-2 block">Serviços</span>
       <h2 class="text-4xl font-bold text-gray-900 mb-4">O que a Star Jardins <span
@@ -235,9 +263,13 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Garden Care"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgDzJ2DzkuXuzw6uwW93xHdH_0b8Lrin9WZ51ly1VRa1L6RXH9LJsLnB4-FE-P9lVR8sJWEnxPsKYyPAtZFFHAe6YJwogn9KbEdWDokfB4vFJbOWsr2zBZt3qsidQi_8ZpmrF1ZBvKDa4AfTfUQi9a1WO-FcCuG1iGdJ5_aB6Gl9TGix98btN8FERZJXyY2Qez9l07_TsR8mxDVPNT-L0Yat4njAeN4HoiGt_ApfknnjHhm2bNU1uUfNG-nHv1PdXQ4-NTtLTPq7E" /> -->
             <img alt="Garden Care"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgDzJ2DzkuXuzw6uwW93xHdH_0b8Lrin9WZ51ly1VRa1L6RXH9LJsLnB4-FE-P9lVR8sJWEnxPsKYyPAtZFFHAe6YJwogn9KbEdWDokfB4vFJbOWsr2zBZt3qsidQi_8ZpmrF1ZBvKDa4AfTfUQi9a1WO-FcCuG1iGdJ5_aB6Gl9TGix98btN8FERZJXyY2Qez9l07_TsR8mxDVPNT-L0Yat4njAeN4HoiGt_ApfknnjHhm2bNU1uUfNG-nHv1PdXQ4-NTtLTPq7E" />
+              src="poda star jardins jardinagem paisagismo.png" />
+
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <!-- Overlapping Icon -->
@@ -249,7 +281,9 @@
               </svg>
               -->
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a2 2 0 0 0-2.83 0L10 9.83l4.17 4.17 6.54-6.54a2 2 0 0 0 0-2.83z"></path>
+                <path
+                  d="M7 14c-1.66 0-3 1.34-3 3 0 1.31-1.16 2-2 2 .92 1.22 2.49 2 4 2 2.21 0 4-1.79 4-4 0-1.66-1.34-3-3-3zm13.71-9.37l-1.34-1.34a2 2 0 0 0-2.83 0L10 9.83l4.17 4.17 6.54-6.54a2 2 0 0 0 0-2.83z">
+                </path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Design Impecável</h3>
@@ -258,7 +292,7 @@
               num
               refúgio de beleza e bom gosto.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -266,9 +300,12 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Stone Scaping"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY8PKBftUqlbY0G4dMyWpbZ18a9QfUXdZ0xbOqCDRyEv4jqijXowqjSJoJXs1Emq7WkjrjjoL9nntBSULfuuXkd80LFTmRFzBGxwMXAbRGeYzSEt4hKhLpFEig0Z4HcAh86IjJTbQky8YYzzhLYBEkf9eyWA-94lpm0dH0HXHt5IViJwBM0o1RnOlkFVT7zo4fPPAk1uqQeLRuVc3ncJGzL6kp4TI4TSu6paX0TwQg1JSoZqq35y_fh-2GsJpDysJwgNyYE2Ki8T0" /> -->
             <img alt="Stone Scaping"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY8PKBftUqlbY0G4dMyWpbZ18a9QfUXdZ0xbOqCDRyEv4jqijXowqjSJoJXs1Emq7WkjrjjoL9nntBSULfuuXkd80LFTmRFzBGxwMXAbRGeYzSEt4hKhLpFEig0Z4HcAh86IjJTbQky8YYzzhLYBEkf9eyWA-94lpm0dH0HXHt5IViJwBM0o1RnOlkFVT7zo4fPPAk1uqQeLRuVc3ncJGzL6kp4TI4TSu6paX0TwQg1JSoZqq35y_fh-2GsJpDysJwgNyYE2Ki8T0" />
+              src="jardim oriental grande ABC Santo André São Bernardo São Caetano do Sul Diadema Mauá Sar Jardins Jardinagem e paisagismo.png" />
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <div
@@ -281,7 +318,9 @@
               </svg>
               -->
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 7 11.5 7 11.5C7 11.5 10.9 10.76 17 8Z"></path>
+                <path
+                  d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22L6.66 19.7C7.14 19.87 7.64 20 8 20C19 20 22 3 22 3C21 5 14 5.25 9 6.25C4 7.25 7 11.5 7 11.5C7 11.5 10.9 10.76 17 8Z">
+                </path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Revitalização de Jardins</h3>
@@ -289,7 +328,7 @@
               ao
               seu patrimônio em tempo recorde.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -297,9 +336,12 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Cleanup"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFgkbblhSRCnmYAsTkW0EUSM-AslQkQhKlAXDc11sDCR3BN0f2oxaQ9YTPAd1iv-xX9gqR4iHnJlbqitZzMRVj61Yz5f6bi7ZBFZUU7tHvPv01HAdKmlW-j5iDQAZ9NfRMTr_OgxjnTzsxShbXuo5fIYcP39_ateY8jPsoil8xVhcITQneE3yYvjX3e2I7n_salFkILeyTZ3766owmnXnMiKwpkQKeVea6C9f7--xKEeCEtY6676SdkvNTzg9ZxYuogra2djBOSPg" /> -->
             <img alt="Cleanup"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDFgkbblhSRCnmYAsTkW0EUSM-AslQkQhKlAXDc11sDCR3BN0f2oxaQ9YTPAd1iv-xX9gqR4iHnJlbqitZzMRVj61Yz5f6bi7ZBFZUU7tHvPv01HAdKmlW-j5iDQAZ9NfRMTr_OgxjnTzsxShbXuo5fIYcP39_ateY8jPsoil8xVhcITQneE3yYvjX3e2I7n_salFkILeyTZ3766owmnXnMiKwpkQKeVea6C9f7--xKEeCEtY6676SdkvNTzg9ZxYuogra2djBOSPg" />
+              src="cuidando das flores star jardim jardinagem paisagismo ABC Diadema Mauá.png" />
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <div
@@ -310,14 +352,16 @@
               </svg>
               -->
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M11 20H13V15.79C16.03 15.35 20.5 13.56 20.5 8C20.5 5.61 19.5 2 19.5 2S18.5 2.5 17.5 3C15 4.29 13 7.37 13 10V11H11V10C11 7.37 9 4.29 6.5 3C5.5 2.5 4.5 2 4.5 2S3.5 5.61 3.5 8C3.5 13.56 7.97 15.35 11 15.79V20Z"></path>
+                <path
+                  d="M11 20H13V15.79C16.03 15.35 20.5 13.56 20.5 8C20.5 5.61 19.5 2 19.5 2S18.5 2.5 17.5 3C15 4.29 13 7.37 13 10V11H11V10C11 7.37 9 4.29 6.5 3C5.5 2.5 4.5 2 4.5 2S3.5 5.61 3.5 8C3.5 13.56 7.97 15.35 11 15.79V20Z">
+                </path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Suplementação Adequada</h3>
             <p class="text-gray-600 mb-6">Devolvemos o vigor às plantas com nutrição de alta performance, garantindo
               flores vibrantes e verde intenso o ano todo.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -325,9 +369,12 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Irrigation"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnAvO1okTRI9ZqvhhTEVhiWGnplfiU1t2QxvEsPcuy4I7AGjGYJwE4mdEJ8PZQ6KgqDr51d1bWnXVJBXK61JeRijfa6EBcFIm4VAJoR2o6CzyJIGIEesQJYNjzkf6wmzOvCeUpLBcsQBO2tLvXI2vZgrbBDhhgZvWufbJNSdIxkBBC0yfQlTpA-L6P-fkcP_lFikgB24SSEuQGosa-Ggbz7AGRX9VNb4rCWIxXsH7zTSae8gqrYZTHceIBk1zCigPuoU9aTKkh7c" /> -->
             <img alt="Irrigation"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCHnAvO1okTRI9ZqvhhTEVhiWGnplfiU1t2QxvEsPcuy4I7AGjGYJwE4mdEJ8PZQ6KgqDr51d1bWnXVJBXK61JeRijfa6EBcFIm4VAJoR2o6CzyJIGIEesQJYNjzkf6wmzOvCeUpLBcsQBO2tLvXI2vZgrbBDhhgZvWufbJNSdIxkBBC0yfQlTpA-L6P-fkcP_lFikgB24SSEuQGosa-Ggbz7AGRX9VNb4rCWIxXsH7zTSae8gqrYZTHceIBk1zCigPuoU9aTKkh7c" />
+              src="jardinagem vip Star Jardins.png" />
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <div
@@ -338,14 +385,16 @@
               </svg>
               -->
               <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-                <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"></path>
+                <path
+                  d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z">
+                </path>
               </svg>
             </div>
             <h3 class="text-2xl font-bold mb-4">Manutenção VIP</h3>
             <p class="text-gray-600 mb-6">Cronograma personalizado para um jardim sempre reluzente e pronto para uso,
               sem que você precise mover um dedo.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -353,9 +402,13 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Landscaping"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Hid7wb7MNMmNrUqG-k9ToYnizLg9l_sKg_sr4qgeSH8CFsPWug7VwLFmAu4TUfwJqR3w94-tCeTu6F_WPpNFi4X2TMHmvSwyondc-TzNkdidJunt3JpapUpJdj_vw9VeHVktz618_fk6CxCIgWrH0pnSiBCZWTVu0hUbGle3JUfaHMe1BRnS9dsn6cUMohS58GD_KP4PXJ0bT9TCsc53Z2Hu3epIDXCDiTp3D3fkAjIBJaFrhkjzai2PveP1guAPIfF8TRl0C-k" /> -->
+
             <img alt="Landscaping"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9Hid7wb7MNMmNrUqG-k9ToYnizLg9l_sKg_sr4qgeSH8CFsPWug7VwLFmAu4TUfwJqR3w94-tCeTu6F_WPpNFi4X2TMHmvSwyondc-TzNkdidJunt3JpapUpJdj_vw9VeHVktz618_fk6CxCIgWrH0pnSiBCZWTVu0hUbGle3JUfaHMe1BRnS9dsn6cUMohS58GD_KP4PXJ0bT9TCsc53Z2Hu3epIDXCDiTp3D3fkAjIBJaFrhkjzai2PveP1guAPIfF8TRl0C-k" />
+              src="jardinagem de prédios e espaços comerciais com a Star Jardins e Paisagismo Grande ABCD e Mauá em São Paulo.png" />
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <div
@@ -375,7 +428,7 @@
             <p class="text-gray-600 mb-6">Proteção contra pragas e doenças com diagnósticos precisos, mantendo a
               vida e o investimento do seu jardim seguros.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -383,9 +436,12 @@
         <div
           class="bg-white group overflow-visible rounded-xl shadow-lg border border-gray-100 hover:-translate-y-2 transition-all duration-300 flex flex-col mt-8">
           <div class="relative h-64 overflow-hidden rounded-t-xl">
+            <!-- <img alt="Plantations"
+              class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeRN5wuoxHAQq4aqL8Z8NJ_gJ07qvjOtUfVedA5LBaJPcTENM6Ep7ZKgNb1HJRBHdbAOUoAfrvmDmAhYtG-AOLaltAJk9VvS9TvU_bZIq5URUJVmNfReBQuF9UqRPENMHHjHy3kFmiKiSTkO-ziP6qFyvZpuVDFrZ2duB6N39RVKLyjKtUxrLq3sQG6He3mjsCBvXC2TmtaMEgP7f7ft20WlieJewXYSP6GFo_sd_jE-D4jIC3_ENMIGo-CGEkzCEQkQJkHH_QeOs" /> -->
             <img alt="Plantations"
               class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeRN5wuoxHAQq4aqL8Z8NJ_gJ07qvjOtUfVedA5LBaJPcTENM6Ep7ZKgNb1HJRBHdbAOUoAfrvmDmAhYtG-AOLaltAJk9VvS9TvU_bZIq5URUJVmNfReBQuF9UqRPENMHHjHy3kFmiKiSTkO-ziP6qFyvZpuVDFrZ2duB6N39RVKLyjKtUxrLq3sQG6He3mjsCBvXC2TmtaMEgP7f7ft20WlieJewXYSP6GFo_sd_jE-D4jIC3_ENMIGo-CGEkzCEQkQJkHH_QeOs" />
+              src="irrigação de jardim jardins paisagismo ABC.png" />
           </div>
           <div class="relative p-8 pt-12 flex-grow">
             <div
@@ -406,7 +462,7 @@
               árvore ou campo, mesmo
               durante suas viagens.</p>
             <a class="inline-flex items-center text-brand font-bold hover:gap-2 transition-all"
-              href="https://instagram.com" target="_blank">Saiba mais
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank">Saiba mais
               <span class="ml-2">→</span></a>
           </div>
         </div>
@@ -417,8 +473,8 @@
   <!-- BEGIN: IconGridSection - Black Background (bg-[#1a1a1a]) - No side padding increase requested for black bg -->
   <section class="py-20 bg-[#1a1a1a] text-white" data-purpose="icon-grid">
     <div class="container mx-auto px-6 text-center">
-      <h2 class="text-4xl font-bold mb-1">Palavras que traduzem</h2>
-      <h2 class="text-4xl font-bold text-brand-light mb-16">nossa marca e nosso trabalho</h2>
+      <h2 class="text-3xl md:text-4xl font-bold mb-1">Palavras que traduzem</h2>
+      <h2 class="text-3xl md:text-4xl font-bold text-brand-light mb-16">nossa marca e nosso trabalho</h2>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
         <!-- Icon Block 1 -->
         <div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
@@ -473,7 +529,9 @@
         <div class="border border-white/10 p-12 hover:bg-brand/10 transition-all cursor-default">
           <div class="text-brand-light mb-6 flex justify-center">
             <svg class="w-16 h-16" fill="currentColor" viewbox="0 0 24 24">
-              <path d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z"></path>
+              <path
+                d="M12 17.27L18.18 21L16.54 13.97L22 9.24L14.81 8.63L12 2L9.19 8.63L2 9.24L7.46 13.97L5.82 21L12 17.27Z">
+              </path>
             </svg>
           </div>
           <h3 class="text-xl font-bold mb-4">Exclusividade</h3>
@@ -496,7 +554,7 @@
   </section>
   <!-- END: IconGridSection -->
   <!-- BEGIN: Instagram Section -->
-  <section id="midias" class="py-20 bg-white px-12" data-purpose="instagram-section">
+  <section id="midias" class="py-20 bg-white px-0 md:px-12" data-purpose="instagram-section">
     <div class="container mx-auto px-14 flex flex-col md:flex-row items-center justify-center gap-16">
       <div class="md:w-1/2 text-center md:text-left">
         <span
@@ -511,15 +569,15 @@
           Lá você encontrará vídeos, fotos de transformações ao vivo e muito mais informações sobre cada projeto de
           paisagismo que realizamos.
         </p>
-        <a href="https://instagram.com" target="_blank"
+        <a href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank"
           class="bg-brand hover:bg-brand-dark text-white font-bold px-10 py-4 rounded-md transition-all inline-flex items-center justify-center">
           Conheça nosso perfil
         </a>
       </div>
       <div class="md:w-1/2 flex justify-center">
-        <a href="https://instagram.com" target="_blank"
+        <a href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank"
           class="text-brand-dark hover:text-brand transition-all hover:scale-105 transform duration-300">
-          <svg class="w-[254px] h-[254px]" fill="currentColor" viewbox="0 0 24 24">
+          <svg class="w-[190px] h-[190px] md:w-[254px] md:h-[254px]" fill="currentColor" viewbox="0 0 24 24">
             <path
               d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
             </path>
@@ -530,16 +588,17 @@
   </section>
   <!-- END: Instagram Section -->
   <!-- BEGIN: CTASection - Increased horizontal padding (px-12) -->
-  <section id="contatos" class="relative py-24 px-12 overflow-hidden" data-purpose="call-to-action">
-    <img alt="CTA Background" class="absolute inset-0 w-full h-full object-cover"
-      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsAtDljMTPS_h-RkZGn5Y3LtdaLwV0lt0xh70_0DTlMi_0fUX5fG1V6IdWekji7Gtor8edpnvAaIJGvcI8C3Ty0_747UDU1tmSQY72w9z1UcAONJkmF2O7HJPUZwWMNDRdE4sHUO9_j9Oep7-jkGZKNXTrVskHGfY2135zPqNkCooDpZqKIkM2zJigR9HTQeOPWzekwLj5sel4r4yBaHzf3EX4zTDAA5nXkDKAfto4MxZ5uGmptkkLVByC5h2CW32tz_uj3N_lTD8" />
-    <div class="absolute inset-0 bg-brand/80"></div>
+  <section id="contatos" class="relative py-24 px-0 md:px-12 overflow-hidden" data-purpose="call-to-action">
+    <img alt="CTA Background" class="absolute inset-0 w-full h-full object-cover brightness-60"
+      src="jardim corredor.png" />
+    <div class="absolute inset-0 bg-brand-dark/75"></div>
     <div class="container mx-auto px-6 relative z-10 text-center text-white">
       <span class="text-brand-light font-bold uppercase tracking-widest text-sm mb-4 block">• Entre em contato hoje
         mesmo</span>
-      <h2 class="text-4xl md:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight">Cobrimos qualquer oferta e
+      <h2 class="text-4xl md:text-5xl font-bold mb-8 max-w-3xl mx-auto leading-tight"
+        style="text-shadow: 2px 4px 8px rgba(0,0,0,0.9);">Cobrimos qualquer oferta e
         oferecemos o melhor serviço!</h2>
-      <p class="text-lg opacity-90 max-w-2xl mx-auto mb-10">
+      <p class="text-lg opacity-100 max-w-2xl mx-auto mb-10" style="text-shadow: 1px 2px 6px rgba(0,0,0,0.9);">
         Não se arrisque com amadorismo! A Star Jardins oferece o melhor serviço do mercado
         e cobre qualquer oferta da concorrência com <strong>qualidade superior</strong>.
         Entre em contato hoje mesmo e descubra como <strong>valorizar seu patrimônio</strong>
@@ -556,7 +615,7 @@
   </section>
   <!-- END: CTASection -->
   <!-- BEGIN: EmergencyBar - Increased horizontal padding (px-12) -->
-  <section class="bg-brand-dark py-20 px-12 relative overflow-hidden" data-purpose="emergency-bar">
+  <section class="bg-brand-dark py-20 px-0 md:px-12 relative overflow-hidden" data-purpose="emergency-bar">
     <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between relative z-10">
       <div class="mb-8 md:mb-0 text-white">
         <h3 class="text-2xl font-bold uppercase mb-2 tracking-tight">Agende uma visita sem compromisso</h3>
@@ -604,7 +663,8 @@
           </p>
           <div class="flex gap-4">
             <a class="w-10 h-10 bg-white/5 hover:bg-brand flex items-center justify-center rounded transition-all text-white"
-              href="https://instagram.com" target="_blank"><svg class="w-5 h-5" fill="currentColor" viewbox="0 0 24 24">
+              href="https://www.instagram.com/star.jardinagem_paisagismo" target="_blank"><svg class="w-5 h-5"
+                fill="currentColor" viewbox="0 0 24 24">
                 <path
                   d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z">
                 </path>
@@ -731,7 +791,9 @@
     <a href="#" target="_blank" data-wa-msg="Olá! Vi o site e gostaria de falar com a equipe da Star Jardins."
       class="bg-white p-4 rounded-full shadow-xl text-[#25D366] cursor-pointer hover:scale-110 transition-transform link-whatsapp">
       <svg class="w-8 h-8" fill="currentColor" viewbox="0 0 24 24">
-        <path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15.09 3.81 13.55 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 13.96C16.31 13.81 15.08 13.21 14.87 13.13C14.66 13.04 14.5 13 14.34 13.25C14.18 13.5 13.72 14 13.56 14.21C13.41 14.42 13.25 14.44 13 14.3C12.75 14.15 11.96 13.88 11.04 13.06C10.33 12.43 9.85 11.64 9.71 11.4C9.57 11.16 9.69 11.03 9.81 10.91C9.92 10.8 10.06 10.61 10.18 10.46C10.3 10.31 10.35 10.2 10.42 10.04C10.5 9.88 10.46 9.75 10.4 9.62C10.34 9.5 9.86 8.35 9.66 7.88C9.46 7.43 9.27 7.48 9.13 7.48C9 7.48 8.84 7.46 8.68 7.46H8.53Z"></path>
+        <path
+          d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15.09 3.81 13.55 3.81 11.91C3.81 7.37 7.5 3.67 12.05 3.67M8.53 7.33C8.37 7.33 8.1 7.39 7.87 7.64C7.65 7.89 7 8.5 7 9.71C7 10.93 7.89 12.1 8 12.27C8.14 12.44 9.76 14.94 12.25 16C12.84 16.27 13.3 16.42 13.66 16.53C14.25 16.72 14.79 16.69 15.22 16.63C15.7 16.56 16.68 16.03 16.89 15.45C17.1 14.87 17.1 14.38 17.04 14.27C16.97 14.17 16.81 14.11 16.56 13.96C16.31 13.81 15.08 13.21 14.87 13.13C14.66 13.04 14.5 13 14.34 13.25C14.18 13.5 13.72 14 13.56 14.21C13.41 14.42 13.25 14.44 13 14.3C12.75 14.15 11.96 13.88 11.04 13.06C10.33 12.43 9.85 11.64 9.71 11.4C9.57 11.16 9.69 11.03 9.81 10.91C9.92 10.8 10.06 10.61 10.18 10.46C10.3 10.31 10.35 10.2 10.42 10.04C10.5 9.88 10.46 9.75 10.4 9.62C10.34 9.5 9.86 8.35 9.66 7.88C9.46 7.43 9.27 7.48 9.13 7.48C9 7.48 8.84 7.46 8.68 7.46H8.53Z">
+        </path>
       </svg>
     </a>
   </div>
