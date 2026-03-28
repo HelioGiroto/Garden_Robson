@@ -36,6 +36,13 @@
 
 
   <style data-purpose="custom-styles">
+    /* Global scroll & overflow lock for mobile viewports */
+    html,
+    body {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
     /* Custom overlay for hero visibility */
     .hero-overlay {
       background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5))
@@ -74,7 +81,7 @@
   </style>
 </head>
 
-<body class="font-sans text-gray-800 bg-white m-0 p-0">
+<body class="font-sans text-gray-800 bg-white m-0 p-0 overflow-x-hidden">
   <!-- BEGIN: MainHeader -->
   <header class="absolute top-0 left-0 w-full z-50 bg-transparent border-b border-white/10"
     data-purpose="main-navigation">
